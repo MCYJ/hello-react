@@ -1,6 +1,6 @@
 // react component 생성을 위해 react import
 import React from 'react';
-//
+// prop's type control
 import PropTypes from 'prop-types';
 
 const MyComponent = props => {

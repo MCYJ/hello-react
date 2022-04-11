@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 
 const Say = () => {
+    // 1st parameter : state
+    // 2nd parameter : setter function
     const [message, setMessage] = useState('');
     const onClickEnter = () => setMessage('안녕하세요!');
     const onClickLeave = () => setMessage('안녕히 가세요!');
