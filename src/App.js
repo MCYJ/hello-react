@@ -6,11 +6,12 @@ import MyComponent from "./MyComponent";
 import Counter from "./Counter";
 import Say from "./Say";
 import ScrollBox from "./ScrollBox";
+import IterationSample from "./HandlingReact/IterationSample";
 
 class App extends Component {
   // class 형 component에는 render()함수가 꼭 있어야 함
   render() {
-    const name = "리액트";
+    // const name = "리액트";
     return (
       // div가 아닌 Frangment tag를 활용하여 tree를 묶음
       <Fragment>
@@ -30,10 +31,12 @@ class App extends Component {
 
         {/* <EventPractice></EventPractice> */}
 
-        <ScrollBox ref={(ref) => this.ScrollBox=ref}></ScrollBox>
+        {/* <ScrollBox ref={(ref) => this.ScrollBox=ref}></ScrollBox>
         <button onClick={() => this.ScrollBox.scrollToBottom()}>
           맨 밑으로
-        </button>
+        </button> */}
+
+        <IterationSample></IterationSample>
       </Fragment>
     );
   }
