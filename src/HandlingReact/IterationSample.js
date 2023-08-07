@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// 배열 수정은 해당 배열을 직접수정하지 않고
+// .filter .concat과 같이 새로운 배열을 생성하는 내장메소드를 활용
+
 const IterationSample = () => {
   // index를 key로 사용하는 것은 비효율적
   /*     const names = ['눈사람', '얼음', '눈', '바람'];
