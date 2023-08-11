@@ -6,9 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // React.stricMode를 활성화하면 일부 라이프사이클이 두번 호출됨
+/*   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>, */
+  <App />,
   document.getElementById('root')
 );
 

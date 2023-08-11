@@ -7,13 +7,32 @@ import Counter from "./Counter";
 import Say from "./Say";
 import ScrollBox from "./ScrollBox";
 import IterationSample from "./HandlingReact/IterationSample";
+import LifeCycleSample from "./HandlingReact/LifeCycleSample";
+import ErrorBoundary from "./HandlingReact/ErrorBoundary";
+import Info from "./HandlingReact/Info";
+
+// 랜덤 색상 지정
+function getRandomColor() {
+  // 16777215를 hex로 변환하면 ffffff가 됨
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 class App extends Component {
+  state = {
+    color: '#000000'
+  }
+
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor()
+    });
+  }
+
   // class 형 component에는 render()함수가 꼭 있어야 함
   render() {
     // const name = "리액트";
     return (
-      // div가 아닌 Frangment tag를 활용하여 tree를 묶음
+      // div가 아닌 Frangment tag를 활용하여 tree를 묶음 -> 문법적으로 의미는 없음
       <Fragment>
         {/* {name === "리액트" ? (
           <h1>리액트입니다.</h1>
@@ -26,7 +45,7 @@ class App extends Component {
         {/* <MyComponent name="김철수" favoriteNumber={10}>어린이</MyComponent> */}
         {/* <MyComponent name={"react"} favoriteNumber={47}>김철수</MyComponent> */}
 
-        {/* <Say></Say>
+{/*         <Say></Say>
         <Counter></Counter> */}
 
         {/* <EventPractice></EventPractice> */}
@@ -38,7 +57,15 @@ class App extends Component {
 
         {/* <IterationSample></IterationSample> */}
 
-        <IterationSample></IterationSample>
+        {/* <IterationSample></IterationSample> */}
+
+        {/* lifecycle methods */}
+{/* 
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color} />
+        </ErrorBoundary> */}
+        <Info></Info>
       </Fragment>
     );
   }
