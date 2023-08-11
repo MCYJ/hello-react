@@ -12,34 +12,34 @@ import useInputs from "./useInputs";
 } */
 
 const Info = () => {
-    const [state, onChange] = useInputs({
-        name: '',
-        nickname: ''
-    });
-    const {name, nickname} = state;
-    /* const onChange = e => {
+  const [state, onChange] = useInputs({
+    name: "",
+    nickname: "",
+  });
+  const { name, nickname } = state;
+  /* const onChange = e => {
         dispatch(e.target);
         // e.target => event가 일어난 tag 전체
         // console.log(e.target);
     }; */
 
-    return (
+  return (
+    <div>
+      <div>
+        <input name="name" value={name} onChange={onChange}></input>
+        <input name="nickname" value={nickname} onChange={onChange}></input>
+      </div>
+      <div>
         <div>
-            <div>
-                <input name="name" value={name} onChange={onChange}></input>
-                <input name="nickname" value={nickname} onChange={onChange}></input>
-            </div>
-            <div>
-                <div>
-                    <b>이름:</b> {name}
-                </div>
-                <div>
-                    <b>닉네임: </b>
-                    {nickname}
-                </div>
-            </div>
+          <b>이름:</b> {name}
         </div>
-    );
+        <div>
+          <b>닉네임: </b>
+          {nickname}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Info;
