@@ -1,3 +1,6 @@
+@import '../../node_modules/open-color/open-color';
+@import '../../node_modules/include-media/dist/include-media';
+
 $red: #fa5252;
 
 @mixin square($size) {

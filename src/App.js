@@ -11,6 +11,8 @@ import LifeCycleSample from "./HandlingReact/LifeCycleSample";
 import ErrorBoundary from "./HandlingReact/ErrorBoundary";
 import Info from "./HandlingReact/Info";
 import SassComponent from "./HandlingReact/SassComponent";
+import CSSModule from "./HandlingReact/CSSModule";
+import StyledComponent from "./HandlingReact/StyledComponent";
 
 // 랜덤 색상 지정
 function getRandomColor() {
@@ -67,7 +69,9 @@ class App extends Component {
           <LifeCycleSample color={this.state.color} />
         </ErrorBoundary> */}
         {/* <Info></Info> */}
-        <SassComponent></SassComponent>
+        {/* <SassComponent></SassComponent> */}
+        <CSSModule></CSSModule>
+        <StyledComponent />
       </Fragment>
     );
   }
